@@ -10,7 +10,8 @@ pip install django
 
 add options in settings:
 
-`SMS_TRANSPORTS = {
+```python
+SMS_TRANSPORTS = {
     'default': {
         'BACKEND': 'libsms.backends.sms.SmsTransport',
         'PARAMS': {
@@ -30,7 +31,7 @@ add options in settings:
             'var2': 'var2',
         }
     }
-}`
+}```
 
 Where default, dummy, other some backend names
 
