@@ -48,9 +48,9 @@ python manage.py test
 python manage.py shell
 
 
-`from libsms import sms_transport`
+`from libsms.transports import sms_transport`
 
-`from libsms import sms_transports`
+`from libsms.transports import sms_transports`
 
 `sms_transport.send(phone=’123123’, msg=’qweqwe’)`
 
