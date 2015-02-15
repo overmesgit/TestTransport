@@ -31,7 +31,8 @@ SMS_TRANSPORTS = {
             'var2': 'var2',
         }
     }
-}```
+}
+```
 
 Where default, dummy, other some backend names
 
