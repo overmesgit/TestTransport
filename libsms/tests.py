@@ -12,3 +12,7 @@ class SMSTest(TestCase):
 
         for transport_name in settings.SMS_TRANSPORTS:
             sms_transports[transport_name].send('123', 'hello')
+
+        sms_transport.send(phone='123123', msg='qweqwe')
+
+        sms_transports['dummy'].send(phone='123123', msg='qweqwe')
