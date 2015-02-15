@@ -1,16 +1,16 @@
 # TestTransport
 
-**Requirement:**
+## **Requirements:**
 
 python2.7
 
-**Install:**
+## **Install:**
 
 pip install django
 
 add options in settings:
 
-SMS_TRANSPORTS = {
+`SMS_TRANSPORTS = {
     'default': {
         'BACKEND': 'libsms.backends.sms.SmsTransport',
         'PARAMS': {
@@ -30,7 +30,7 @@ SMS_TRANSPORTS = {
             'var2': 'var2',
         }
     }
-}
+}`
 
 Where default, dummy, other some backend names
 
@@ -39,17 +39,17 @@ Where default, dummy, other some backend names
 BACKEND - path to transport module
 PARAMS - options for transport constructor
 
-**Test:**
+## **Test:**
 
 python manage.py test
 
 python manage.py shell
 
 
-from libsms import sms_transport
+`from libsms import sms_transport`
 
-from libsms import sms_transports
+`from libsms import sms_transports`
 
-sms_transport.send(phone=’123123’, msg=’qweqwe’)
+`sms_transport.send(phone=’123123’, msg=’qweqwe’)`
 
-sms_transports[‘dummy’].send(phone=’123123’, msg=’qweqwe’)
+`sms_transports[‘dummy’].send(phone=’123123’, msg=’qweqwe’)`
